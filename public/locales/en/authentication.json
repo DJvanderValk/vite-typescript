@@ -1,0 +1,18 @@
+{
+	"authenticating": "Authenticating",
+	"confirmPassword": "Confirm password",
+	"differentPasswords": "The password didn't match",
+  "emailAddress": "Email address",
+	"enterPassword": "Enter your password",
+	"enterUsername": "Enter your username",
+	"enterValidUsername": "Enter a valid username",
+  "firstName": "First name",
+  "lastName": "Last name",
+	"login": "Login",
+	"loginFailed": "Login has failed",
+	"password": "Password",
+	"register": "Register",
+	"signingOut": "Signing out",
+	"username": "Username",
+	"wrongUsernameOrPassword": "Wrong username or password"
+}

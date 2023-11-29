@@ -1,0 +1,18 @@
+{
+	"authenticating": "Authenticeren",
+	"confirmPassword": "Bevestig wachtwoord",
+	"differentPasswords": "De wachtwoorden zijn niet gelijk",
+  "emailAddress": "Email adres",
+	"enterPassword": "Vul je wachtwoord in",
+	"enterUsername": "Vul je gebruikersnaam in",
+	"enterValidUsername": "Vul een geldig gebruikersnaam in",
+  "firstName": "Voornaam",
+  "lastName": "Achternaam",
+	"login": "Inloggen",
+	"loginFailed": "Inloggen mislukt",
+	"password": "Wachtwoord",
+	"register": "Registeren",
+	"signingOut": "Uitloggen",
+	"username": "Gebruikersnaam",
+	"wrongUsernameOrPassword": "Verkeerde gebruikersnaam of wachtwoord"
+}

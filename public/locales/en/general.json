@@ -1,0 +1,20 @@
+{
+  "about": "About",
+  "dark": "Dark",
+  "drawing": "Drawing",
+  "home": "Home",
+  "language": "Language",
+  "light": "Light",
+  "logout": "Log out",
+  "map": "Map",
+  "newVersionIsAvailable": "A new version is available",
+  "notAuthorized": "Not authorized",
+  "pageWithPathNotFound": "The page {{path}} you're looking for cannot be found",
+  "profile": "Profile",
+  "settings": "Settings",
+  "system": "System",
+  "tableOfContent": "Table of content",
+  "theme": "Theme",
+  "welcome": "Welcome",
+  "whatsNew": "What's new?"
+}

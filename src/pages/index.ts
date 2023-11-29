@@ -1,0 +1,11 @@
+export { default as AboutPage } from './about/aboutPage';
+export { default as AdminPage } from './admin/adminPage';
+export { default as SandboxPage } from './sandbox/sandboxPage';
+export { default as HomePage } from './home/homePage';
+export { default as LoginPage } from './login/loginPage';
+export { default as LogoutPage } from './logout/logoutPage';
+export { default as NotAuthorizedPage } from './notAuthorized/notAuthorized';
+export { default as NotFoundPage } from './notFound/notFoundPage';
+export { default as RegisterPage } from './register/registerPage';
+export { default as SettingsPage } from './settings/settingsPage';
+export { default as WizardPage } from './wizard/wizardPage';

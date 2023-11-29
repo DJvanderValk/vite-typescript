@@ -1,0 +1,27 @@
+{
+	"verbose": true,
+	"moduleNameMapper": {
+		"\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+		"\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
+		"^~assets(.*)$": "<rootDir>/src/assets$1",
+		"^~atoms(.*)$": "<rootDir>/src/atoms$1",
+		"^~components(.*)$": "<rootDir>/src/components$1",
+		"^~constants(.*)$": "<rootDir>/src/constants$1",
+		"^~enums(.*)$": "<rootDir>/src/enums$1",
+		"^~features(.*)$": "<rootDir>/src/features$1",
+		"^~hooks(.*)$": "<rootDir>/src/hooks$1",
+		"^~services(.*)$": "<rootDir>/src/services$1"
+	},
+	"transform": {
+		"^.+\\.tsx?$": "ts-jest"
+	},
+	"setupFiles": [
+		"<rootDir>/src/utils/jest/jest.envSetup.ts"
+	],
+	"setupFilesAfterEnv": [
+		"<rootDir>/src/utils/jest/jest.setup.ts"
+	],
+	"testPathIgnorePatterns": [
+		"/node_modules"
+	]
+}

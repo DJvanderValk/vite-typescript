@@ -1,0 +1,91 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:@typescript-eslint/recommended",
+		"prettier"
+	],
+	"overrides": [],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaVersion": "latest",
+		"sourceType": "module"
+	},
+	"plugins": [
+		"jest",
+		"react",
+		"react-hooks",
+		"@typescript-eslint",
+		"import"
+	],
+	"rules": {
+		"indent": [
+			"error",
+			"tab",
+			{
+				"SwitchCase": 1
+			}
+		],
+		"no-multi-spaces": [
+			"warn"
+		],
+		"@typescript-eslint/no-unused-vars": "warn",
+		"semi": "error",
+		"curly": 2,
+		"quotes": [
+			"warn",
+			"single",
+			{
+				"avoidEscape": true,
+				"allowTemplateLiterals": true
+			}
+		],
+		"import/order": [
+			"warn",
+			{
+				"groups": [
+					"builtin",
+					"external",
+					"internal",
+					[
+						"parent",
+						"sibling"
+					],
+					"index"
+				],
+				"pathGroups": [
+					{
+						"pattern": "@(react|react-native)",
+						"group": "builtin",
+						"position": "before"
+					},
+					{
+						"pattern": "~*",
+						"group": "internal"
+					},
+					{
+						"pattern": "~*/**",
+						"group": "internal"
+					}
+				],
+				"pathGroupsExcludedImportTypes": [
+					"react"
+				],
+				"newlines-between": "always",
+				"alphabetize": {
+					"order": "asc",
+					"caseInsensitive": true
+				}
+			}
+		]
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	}
+}

@@ -1,0 +1,24 @@
+.register-page {
+	width: 100vw;
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: auto;
+	background-image: url('~/src/assets/2433075.jpg');
+	background-position: center;
+	background-color: rgba(0, 0, 0, 0.6);
+	background-blend-mode: overlay;
+}
+
+.register-container {
+	padding: 8px;
+	/* margin: 8px; */
+	background-color: whitesmoke;
+	min-height: 300px;
+	min-width: 200px;
+	max-width: 400px;
+	width: calc(100vw - 40px);
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}

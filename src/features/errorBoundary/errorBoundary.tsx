@@ -1,6 +1,9 @@
 import React from 'react';
 
-interface Props {
+import { Box, Button, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
+
+interface ErrorBoundaryProps {
 	children?: React.ReactNode;
 }
 
@@ -8,9 +11,9 @@ interface State {
 	hasError: boolean;
 }
 
-class ErrorBoundary extends React.Component<Props, State> {
+class ErrorBoundary extends React.Component<ErrorBoundaryProps, State> {
 	public state: State = {
-		hasError: false,
+		hasError: false
 	};
 
 	public static getDerivedStateFromError(_: Error): State {
@@ -27,7 +30,12 @@ class ErrorBoundary extends React.Component<Props, State> {
 			return this.props.children;
 		}
 
-		return <h1>Sorry.. there was an error</h1>;
+		return (
+			<Box>
+				<Typography>Oops, something went wrong</Typography>
+				<Button reloadDocument component={Link} to=''>Home</Button>
+			</Box>
+		);
 	}
 }
 

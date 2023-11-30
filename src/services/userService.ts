@@ -16,8 +16,6 @@ type TokenResponse = {
 	idToken: string;
 };
 
-const localAdminUser = 'henk';
-
 class UserService {
 	axiosInstance: AxiosInstance;
 
@@ -50,12 +48,6 @@ class UserService {
 			);
 			this.saveIdToken(data.idToken);
 		} catch (error) {
-			if(username === localAdminUser) {
-				// Overwrite
-				console.log('local login overwrite');
-				this.saveIdToken(`${localAdminUser}.asdfa.adsfsa`);
-				return true;
-			}
 			console.log(error);
 			return false;
 		}
@@ -151,14 +143,10 @@ class UserService {
 	}
 
 	checkTokenValidity(): boolean {
-		return true;
+		// return true;
 		
 		const expiration = sessionStorage.getItem(tokenKeys.ATOKEN_EXP);
 		const valid = Number(expiration) * 1000 > Date.now();
-		if(expiration === localAdminUser) {
-			console.log('local auth overwrite', expiration);
-			return true;
-		}
 		return valid;
 	}
 }

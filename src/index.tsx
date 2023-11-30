@@ -15,6 +15,10 @@ import './lib/viteErrorOverlay';
 import './lib/i18n';
 import './index.css';
 
+if(import.meta.env.MODE === 'development') {
+	import('./utils/mocks/browser');
+}
+
 const root = createRoot(document.getElementById('root') as HTMLElement);
 root.render(
 	<Suspense

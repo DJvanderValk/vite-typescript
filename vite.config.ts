@@ -1,3 +1,5 @@
+/// <reference types="vitest" />
+
 import * as path from 'path';
 
 import react from '@vitejs/plugin-react';
@@ -36,6 +38,10 @@ export default ({ mode, command }) => {
 		},
 		server: {
 			port: parseInt(process.env.PORT)
-		}
+		},
+		test: {
+			globals: true,
+			setupFiles: ['./src/setupTest.ts']
+		},
 	});
 };

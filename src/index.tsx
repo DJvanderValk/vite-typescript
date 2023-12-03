@@ -16,7 +16,7 @@ import './lib/i18n';
 import './index.css';
 
 if(import.meta.env.MODE === 'development') {
-	import('./utils/mocks/browser');
+	import('./mocks/browser');
 }
 
 const root = createRoot(document.getElementById('root') as HTMLElement);

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 import { ThemeProvider } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
-import { Route, Routes, useSearchParams } from 'react-router-dom';
+import { Route, Routes, createBrowserRouter, useSearchParams } from 'react-router-dom';
 
 import { generalInformation, queryParameters, urlPrefixes } from '~constants';
 import { LanguageEnum, UserRoleEnum } from '~enums';
@@ -45,6 +45,15 @@ const App = () => {
 	const buildDocumentTitle = (title: string) => {
 		return `${title} - ${generalInformation.APP_NAME}`;
 	};
+	
+	const router = createBrowserRouter([
+		{
+			element: <PublicRoute />,
+			children: [
+				
+			]
+		}
+	]);
 
 	return (
 		<ThemeProvider theme={AppTheme()}>

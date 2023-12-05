@@ -143,7 +143,7 @@ class UserService {
 	}
 
 	checkTokenValidity(): boolean {
-		// return true;
+		return true;
 		
 		const expiration = sessionStorage.getItem(tokenKeys.ATOKEN_EXP);
 		const valid = Number(expiration) * 1000 > Date.now();

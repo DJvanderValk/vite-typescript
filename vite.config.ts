@@ -14,9 +14,6 @@ export default ({ mode, command }) => {
 	// };
 
 	return defineConfig({
-		assetsInclude: [
-			'**/*.md'
-		],
 		plugins: [
 			react()
 		],
@@ -34,6 +31,8 @@ export default ({ mode, command }) => {
 				'~pages': path.resolve(__dirname, 'src', 'pages'),
 				'~services': path.resolve(__dirname, 'src', 'services'),
 				'~themes': path.resolve(__dirname, 'src', 'themes'),
+				// Polyfills
+				path: 'path-browserify',
 			}
 		},
 		server: {

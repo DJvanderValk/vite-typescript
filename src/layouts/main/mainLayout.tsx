@@ -3,8 +3,7 @@ import React from 'react';
 import { Box } from '@mui/material';
 import { Outlet } from 'react-router-dom';
 
-import { Header, NavigationBar } from '~components';
-import { ErrorBoundary } from '~features';
+import { ErrorBoundary, Header, NavigationBar } from '~components';
 
 const MainLayout = () => {
 	return (
@@ -14,7 +13,7 @@ const MainLayout = () => {
 			sx={{ width: '100%', height: '100%' }}
 		>
 			<Header />
-			<Box display='flex' flexGrow={1}>
+			<Box display='flex' flexGrow={1} overflow='hidden'>
 				<NavigationBar />
 				<ErrorBoundary>
 					<Box display='block' flexGrow={1} sx={{ overflowY: 'hidden' }}>

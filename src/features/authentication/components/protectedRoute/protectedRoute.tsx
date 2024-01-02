@@ -9,7 +9,8 @@ import { PageLoadSpinner } from '~components';
 import { urlPrefixes } from '~constants';
 import { UserRoleEnum } from '~enums';
 import { NotAuthorizedPage } from '~pages';
-import { UserService } from '~services';
+
+import UserService from '../../services/userService';
 
 interface ProtectedRouteProps {
 	minimumRole: UserRoleEnum;

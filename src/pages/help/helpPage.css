@@ -1,0 +1,17 @@
+.toc-header-link,
+.toc-header-link:hover,
+.toc-header-link:active,
+.toc-header-link:visited {
+	color: blue;
+	text-decoration: none;
+}
+
+.content-header-hash-link {
+	float: left;
+	margin-left: -1.5rem;
+	position: relative;
+	text-align: center;
+	color: grey;
+	text-decoration: none;
+	width: 1.5rem;
+}

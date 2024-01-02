@@ -5,8 +5,8 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 import { PageLoadSpinner } from '~components';
 import { urlPrefixes } from '~constants';
+import UserService from '~features/authentication/services/userService';
 import { PageProps } from '~pages/types';
-import { UserService } from '~services';
 
 const LogoutPage = (props: PageProps) => {
 	const { t } = useTranslation('authentication');

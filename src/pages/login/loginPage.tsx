@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
 import { queryParameters } from '~constants';
-import { Login } from '~features';
+import { Login } from '~features/authentication';
 import { PageProps } from '~pages/types';
 
 import './loginPage.css';

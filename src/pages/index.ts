@@ -1,6 +1,7 @@
 export { default as AboutPage } from './about/aboutPage';
 export { default as AdminPage } from './admin/adminPage';
 export { default as SandboxPage } from './sandbox/sandboxPage';
+export { default as HelpPage } from './help/helpPage';
 export { default as HomePage } from './home/homePage';
 export { default as LoginPage } from './login/loginPage';
 export { default as LogoutPage } from './logout/logoutPage';

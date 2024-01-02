@@ -34,6 +34,9 @@ import {
 	BatteryFull as BatteryFullIcon,
 	BatteryUnknown as BatteryUnknownIcon,
 } from '@mui/icons-material';
+import Markdown from 'markdown-to-jsx';
+
+import helpFile from '~docs/HELP.md?raw';
 
 const changeMeForPwaUpdate = 5;
 
@@ -53,13 +56,11 @@ interface BatteryProps {
 	value: number;
 }
 
-
 const Battery = (props: BatteryProps) => {
-	
 	const iconProps: SvgIconProps = {
-		fontSize: 'medium'
-	}
-	
+		fontSize: 'medium',
+	};
+
 	const thresholds = [
 		{
 			value: 100,
@@ -104,7 +105,9 @@ const Battery = (props: BatteryProps) => {
 
 	return (
 		<Box>
-			{thresholds.find((el) => props.value >= el.value)?.icon ?? <BatteryUnknownIcon />}
+			{thresholds.find((el) => props.value >= el.value)?.icon ?? (
+				<BatteryUnknownIcon />
+			)}
 		</Box>
 	);
 };

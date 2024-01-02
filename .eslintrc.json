@@ -33,6 +33,7 @@
 			"warn"
 		],
 		"@typescript-eslint/no-unused-vars": "warn",
+		"no-restricted-imports": ["error", { "patterns": ["~features/*/*"] }],
 		"semi": "error",
 		"curly": 2,
 		"quotes": [

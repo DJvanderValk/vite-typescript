@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-import { Registration } from '~features';
+import { Registration } from '~features/authentication';
 import { PageProps } from '~pages/types';
 
 import './registerPage.css';

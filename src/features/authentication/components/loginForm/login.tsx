@@ -20,7 +20,8 @@ import { useTranslation } from 'react-i18next';
 import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 
 import { urlPrefixes } from '~constants';
-import { UserService } from '~services';
+
+import UserService from '../../services/userService';
 
 interface LoginProps {
 	user?: string;

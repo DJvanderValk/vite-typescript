@@ -6,11 +6,12 @@ import { Route, Routes, createBrowserRouter, useSearchParams } from 'react-route
 
 import { generalInformation, queryParameters, urlPrefixes } from '~constants';
 import { LanguageEnum, UserRoleEnum } from '~enums';
-import { ProtectedRoute, PublicRoute } from '~features';
+import { ProtectedRoute, PublicRoute } from '~features/authentication';
 import { AuthenticationLayout, MainLayout } from '~layouts';
 import {
 	AboutPage,
 	AdminPage,
+	HelpPage,
 	HomePage,
 	LoginPage,
 	LogoutPage,
@@ -59,9 +60,6 @@ const App = () => {
 		<ThemeProvider theme={AppTheme()}>
 			<div className='app'>
 				<Routes>
-					{import.meta.env.DEV && (
-						<Route path={urlPrefixes.SANDBOX} element={<SandboxPage />} />
-					)}
 
 					<Route element={<PublicRoute />}>
 						<Route element={<AuthenticationLayout />}>
@@ -81,6 +79,13 @@ const App = () => {
 					</Route>
 
 					<Route element={<MainLayout />}>
+						{import.meta.env.DEV && (
+							<Route path={urlPrefixes.SANDBOX} element={<SandboxPage />} />
+						)}
+						<Route
+							path={urlPrefixes.HELP}
+							element={<HelpPage />}
+						/>
 						<Route element={<ProtectedRoute />}>
 							<Route
 								path={urlPrefixes.HOME}

@@ -82,8 +82,8 @@ const NavigationBar = () => {
 	const content = (
 		<List sx={{ width: '100%' }} disablePadding>
 			{tags.map((tag) => (
-				<>
-					<ListItemButton key={tag.key} onClick={() => handleClick(tag.key)}>
+				<React.Fragment key={tag.key}>
+					<ListItemButton onClick={() => handleClick(tag.key)}>
 						<ListItemIcon>
 							{expandedTags.includes(tag.key) ? (
 								<ExpandMoreIcon />
@@ -112,7 +112,7 @@ const NavigationBar = () => {
 								</List>
 							))}
 					</Collapse>
-				</>
+				</React.Fragment>
 			))}
 		</List>
 	);

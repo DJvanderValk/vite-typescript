@@ -5,7 +5,8 @@ import { Navigate, Outlet } from 'react-router-dom';
 
 import { PageLoadSpinner } from '~components';
 import { urlPrefixes } from '~constants';
-import { UserService } from '~services';
+
+import UserService from '../../services/userService';
 
 /**
  * A route that is only available if a user is not logged in

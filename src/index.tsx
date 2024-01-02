@@ -6,8 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
 import { RecoilURLSync, RecoilURLSyncJSON } from 'recoil-sync';
 
-import { PageLoadSpinner } from '~components';
-import { ErrorBoundary } from '~features';
+import { ErrorBoundary, PageLoadSpinner } from '~components';
 
 import App from './app';
 

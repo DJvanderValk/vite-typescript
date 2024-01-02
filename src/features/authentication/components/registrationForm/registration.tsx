@@ -14,7 +14,8 @@ import { useTranslation } from 'react-i18next';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 import { regexes, urlPrefixes } from '~constants';
-import { UserService } from '~services';
+
+import UserService from '../../services/userService';
 
 const Register = () => {
 	const { t } = useTranslation('authentication');

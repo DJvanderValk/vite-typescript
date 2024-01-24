@@ -28,11 +28,9 @@ const backToTopAnchorId = 'back-to-top-anchor';
 const HelpPage = () => {
 	const location = useLocation();
 	
-	const activeHeaderId = useHeadersObserver();
-	
 	const ref = useRef();
-	const bla = useIntersectionObserver(ref);
-	console.log(bla)
+	const activeHeaderId = useIntersectionObserver(ref, ['h2', 'h3']);
+	console.log(activeHeaderId);
 	
 	const [scrollTarget, setScrollTarget] = useState<Node | Window | undefined>();
 	const scrollTrigger = useScrollTrigger({
@@ -91,7 +89,7 @@ const HelpPage = () => {
 	const content = (
 		<Markdown
 			options={{
-				// wrapper: React.Fragment,
+				wrapper: React.Fragment,
 				createElement(tag: keyof React.ReactHTML, props, children) {
 					if(contentTagsExclude.includes(tag)) {
 						return null;
@@ -127,7 +125,7 @@ const HelpPage = () => {
 			sx={{ overflowY: 'auto' }}
 		>
 			<Stack spacing={2} direction='row' position='relative'>
-				<Box ref={ref} minWidth='200px'>
+				<Box ref={ref} id='dslkf' minWidth='200px'>
 					{content}
 				</Box>
 				<Box minWidth='200px'>

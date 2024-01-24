@@ -1,4 +1,4 @@
-import { RefObject, useEffect, useState } from 'react';
+import { MutableRefObject, RefObject, useEffect, useState } from 'react';
 
 interface Args extends IntersectionObserverInit {
 	
@@ -9,7 +9,36 @@ interface IntersectionObserverProps {
 	options: IntersectionObserverInit
 }
 
-const useIntersectionObserver = (props: IntersectionObserverProps): IntersectionObserverEntry | undefined => {
+const useIntersectionObserver = (
+	elementRef: MutableRefObject<undefined | Element>,
+	elements: string[]
+) => {
+	const children = elementRef?.current?.children;
+	
+	const [entry, setEntry] = useState<IntersectionObserverEntry>();
+	
+	useEffect(() => {
+		const observer = new IntersectionObserver(entries => {
+			entries.forEach(entry => {
+				if(entry.isIntersecting) {
+					setEntry(entry.target.getAttribute("id"));
+				}
+			});
+		});
+		
+		const targetSections = document.querySelectorAll(elements);
+		targetSections.forEach((section) => {
+			observer.observe(section);
+		});
+		
+		return () => observer.disconnect();
+	}, []);
+	
+	return entry;
+};
+
+
+const useIntersectionObserverBup = (props: IntersectionObserverProps): IntersectionObserverEntry | undefined => {
 	const [entry, setEntry] = useState<IntersectionObserverEntry>();
 
 	const updateEntry = ([entry]: IntersectionObserverEntry[]): void => {
@@ -21,7 +50,7 @@ const useIntersectionObserver = (props: IntersectionObserverProps): Intersection
 
 		const observer = new IntersectionObserver(updateEntry, props.options);
 
-		observer.observe(node);
+		// observer.observe(node);
 
 		return () => observer.disconnect();
 
